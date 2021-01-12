@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.adsapp.MainActivity">
+    <item
+        android:id="@+id/recentAds"
+        android:icon="@drawable/ic_ads_feed"
+        android:title="@string/recent"
+         />
+    <item
+        android:id="@+id/addToFavouriteAd"
+        android:icon="@drawable/ic_star"
+        android:title="@string/favourites" />
+</menu>

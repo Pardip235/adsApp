@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_ads"
+    app:startDestination="@id/recentAds"
+    tools:ignore="UnusedNavigation">
+    <fragment
+        android:id="@+id/recentAds"
+        android:name="com.example.adsapp.ui.advertisement.NewAdsFragment"
+        tools:layout="@layout/fragment_adlist"
+       />
+
+    <fragment
+        android:id="@+id/addToFavouriteAd"
+        android:name="com.example.adsapp.ui.advertisement.FavoriteAdsFragment"
+        tools:layout="@layout/fragment_adlist"/>
+</navigation>

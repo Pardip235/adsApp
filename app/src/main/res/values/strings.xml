@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">adsApp</string>
+<string name="app_name">adsApp</string>
+<string name="recent">Recent</string>
+<string name="favourites">Favourite</string>
+<string name="share_ads">Share Ads</string>
+<string name="ads_image">Ads Image</string>
+<string name="price">Price :</string>
+<string name="loading">Loading</string>
+<string name="network_error">No internet connection. Please connect to internet.</string>
+<string name="server_error">Error fetching the advertisements from network. Please try again later!</string>
+    <string name="empty">Empty results</string>
 </resources>
