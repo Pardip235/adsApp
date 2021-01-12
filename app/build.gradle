@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.adsapp"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:${Versions.androidx}"
+    implementation "androidx.appcompat:appcompat:${Versions.app}"
+    implementation "com.google.android.material:material:${Versions.material_design}"
+    implementation "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
+    implementation "androidx.navigation:navigation-fragment-ktx:${Versions.navigation_fragment}"
+    implementation "androidx.navigation:navigation-ui-ktx:${Versions.navigation_ui}"
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation "androidx.test.ext:junit:${Versions.test_ext}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${Versions.expresso_core}"
+    implementation "com.google.dagger:dagger-android:${Versions.dagger}"
+    implementation "com.google.dagger:dagger-android-support:${Versions.dagger_support}"
+    kapt "com.google.dagger:dagger-android-processor:${Versions.dagger_processor}"
+    kapt "com.google.dagger:dagger-compiler:${Versions.dagger_compiler}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp3}"
+    implementation "com.squareup.okhttp3:okhttp:${Versions.okhttp3}"
+    implementation "com.squareup.retrofit2:retrofit:${Versions.retrofit2}"
+    implementation "com.squareup.retrofit2:converter-gson:${Versions.retrofit2}"
+    implementation "com.google.code.gson:gson:${Versions.gson}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit2}"
+    implementation "io.reactivex.rxjava2:rxjava:${Versions.rxjava2}"
+    implementation "io.reactivex.rxjava2:rxandroid:${Versions.rxjava2_android}"
+    implementation "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle_ext}"
+    implementation "androidx.room:room-runtime:${Versions.room_version}"
+    kapt "androidx.room:room-compiler:${Versions.room_version}"
+    implementation "androidx.room:room-rxjava2:${Versions.room_version}"
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "com.squareup.picasso:picasso:${Versions.picasso}"
+    implementation "androidx.cardview:cardview:${Versions.card_view}"
+    implementation 'com.android.support:multidex:1.0.3'
+}
