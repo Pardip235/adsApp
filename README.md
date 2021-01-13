@@ -12,9 +12,9 @@
 3. [RxJava](https://github.com/ReactiveX/RxJava)
 
 # App content details
- App contain the initial screen with list of recent advertisement fetched from network. User can makes  it favourites and also remove from favourites by clicking icon over image. When use click icon, advertisement item save in local database. And next screen shows favourite list of advertisement that fetched from local database, Also the user can make unfavourite advertisement item by click icon. 
+ App contains the initial screen with list of recent advertisement fetched from network. User can makes  it favourites and also remove from favourites by clicking icon over image. When user click icon, advertisement item save in local database. And next screen shows favourite list of advertisement that fetched from local database, Also the user can make unfavourite advertisement item by click icon. 
  # Project Architecture
-I followed the MVVM architecture for the project as this is the latest and so far the tending and I'm used to. I have used ViewModel class for data fetching and observe the data in the view. I have used ViewState for code readiablilty, debugging and testing easier by grouping change value by view(Activity, Fragment) "state". I have used Use-case business logic for avoiding code duplication.<br/>
+I have used the MVVM architecture for the project as this is the latest and so far the tending and I'm used to. I have used ViewModel class for data fetching and observe the data in the view. I have used ViewState for code readiablilty, debugging and testing easier by grouping change value by view(Activity, Fragment) "state". I have used Use-case business logic for avoiding code duplication and make it re-usable.<br/>
 
 # Need to improve
 Local unit test and integration testing is missing in the app. It could be better for doing it in further development. Also, modular programming is latest and trending but I haven’t done it yet, I have least try to use clean code architecture, need to improve on it, willing to learn and implement it in my future project.
