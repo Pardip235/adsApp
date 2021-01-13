@@ -10,8 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.adsapp.R
 import com.example.adsapp.ui.advertisement.adapter.AdsAdapter
 import com.example.adsapp.utils.AdapterCallback
-import com.example.adsapp.utils.Constant
 import com.example.adsapp.utils.BottomSpacingItemDecoration
+import com.example.adsapp.utils.Constant
+
 import javax.inject.Inject
 
 abstract class BaseAdvertisementFragment :  Fragment(R.layout.fragment_adlist) {
@@ -50,9 +51,8 @@ abstract class BaseAdvertisementFragment :  Fragment(R.layout.fragment_adlist) {
 
             adsAdapter = AdsAdapter(object : AdapterCallback {
                 override fun addRemoveFromFavorites(id: Int) {
-                    TODO("Not yet implemented")
+                    viewModel.addRemoveFromFavorites(id)
                 }
-
             })
 
             adapter = adsAdapter

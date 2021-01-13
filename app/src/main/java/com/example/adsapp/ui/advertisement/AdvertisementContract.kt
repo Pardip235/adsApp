@@ -14,6 +14,7 @@ interface AdvertisementContract {
 
     interface ViewModel {
         val viewState: MutableLiveData<ViewState>
+        fun addRemoveFromFavorites(id: Int)
         fun getAdvertisements(filterFavorites: Boolean)
     }
 }
