@@ -21,10 +21,6 @@ class NewAdsFragment : BaseAdvertisementFragment() {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(AdvertisementViewModel::class.java)
-    }
 
     override fun ViewState.Error.handleError() {
         with(layoutHolder) {
